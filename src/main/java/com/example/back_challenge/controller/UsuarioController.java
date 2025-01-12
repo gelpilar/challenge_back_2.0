@@ -13,7 +13,7 @@ public class UsuarioController {
     @Autowired
     private UserService userService;
 
-    @GetMapping
+    @PostMapping("/email")
     public UserModel getUsuarioPorMail(@RequestBody UserRequestDto user)
     {
         return this.userService.obtenerPorMail(user.getEmail());
