@@ -22,7 +22,8 @@ public class BackChallengeApplication {
 						.allowedOrigins("*")
 						.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
 						.allowedHeaders("*")
-						.allowCredentials(true); 
+						.allowCredentials(true);
 			}
 		};
+}
 }
