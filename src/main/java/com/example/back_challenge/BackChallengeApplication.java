@@ -12,16 +12,17 @@ public class BackChallengeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BackChallengeApplication.class, args);
 	}
+
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**") // Permitir todas las rutas
-						.allowedOrigins("*") // Permitir cualquier origen
-						.allowedMethods("*") // Permitir todos los métodos HTTP
-						.allowedHeaders("*"); // Permitir cualquier encabezado
+				registry.addMapping("/**")
+						.allowedOrigins("*")
+						.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+						.allowedHeaders("*")
+						.allowCredentials(true); 
 			}
 		};
-	}
 }
