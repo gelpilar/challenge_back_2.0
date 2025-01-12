@@ -17,10 +17,10 @@ public class BackChallengeApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**")
-						.allowedOrigins("*")
-						.allowedMethods("*")
-						.allowedHeaders("*");
+				registry.addMapping("/**") // Permitir todas las rutas
+						.allowedOrigins("*") // Permitir cualquier origen
+						.allowedMethods("*") // Permitir todos los métodos HTTP
+						.allowedHeaders("*"); // Permitir cualquier encabezado
 			}
 		};
 	}
