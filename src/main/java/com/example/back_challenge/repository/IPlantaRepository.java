@@ -39,7 +39,7 @@ public interface IPlantaRepository extends JpaRepository<PlantasModel, Long> {
             "FROM detalle_caracteristica_planta d " +
             "INNER JOIN caracteristica c ON d.id_caracteristica = c.id " +
             "WHERE d.id_planta = :idPlanta " +
-            "ORDER BY c.nombre", nativeQuery = true)
+            "ORDER BY c.id", nativeQuery = true)
     List<CaracteristicaDto> findCaracteristicasByPlantaId(@Param("idPlanta") Long idPlanta);
 
     @Transactional

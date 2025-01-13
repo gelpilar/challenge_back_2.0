@@ -1,9 +1,6 @@
 package com.example.back_challenge.controller;
 
-import com.example.back_challenge.dto.AlertasDto;
-import com.example.back_challenge.dto.CaracteristicaDto;
-import com.example.back_challenge.dto.PlantaDto;
-import com.example.back_challenge.dto.PlantaRequesDto;
+import com.example.back_challenge.dto.*;
 import com.example.back_challenge.models.PlantasModel;
 import com.example.back_challenge.service.PlantaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,9 +40,9 @@ public class PlantaController {
            }
 
     @GetMapping("/plantas/{id}")
-    public ArrayList<PlantasModel> getPlantaPorId(@PathVariable Long id)
+    public ArrayList<PlantaResponseDto> getPlantaPorId(@PathVariable Long id)
     {
-        return  this.plantasService.getPlantasPorId(id);
+        return PlantaResponseDto.arregloDTO(this.plantasService.getPlantasPorId(id));
     }
 
     @GetMapping("/caracteristicas/{id}")

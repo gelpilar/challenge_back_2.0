@@ -48,11 +48,11 @@ public class ApplicationConfig
 
     private UserDetailsService userDetailsService() {
         return email -> {
-            UserModel user = userServices.obtenerPorMail(email); // fetch the user by email
-            if (user == null) { // Check if user is null (i.e., user not found)
+            UserModel user = userServices.obtenerPorMail(email);
+            if (user == null) {
                 throw new UsernameNotFoundException("Error al encontrar usuario con el email: " + email);
             } else {
-                return new CostumerUserDetails(user); // return the user details
+                return new CostumerUserDetails(user);
             }
         };
     }
