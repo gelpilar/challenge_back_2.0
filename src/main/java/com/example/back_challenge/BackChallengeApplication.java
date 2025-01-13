@@ -19,7 +19,7 @@ public class BackChallengeApplication {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**")
-						.allowedOrigins("https://challenge-back-2-0.onrender.com")
+						.allowedOrigins("*")
 						.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
 						.allowedHeaders("*")
 							.allowCredentials(true);
