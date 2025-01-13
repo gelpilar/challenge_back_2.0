@@ -21,8 +21,8 @@ public class BackChallengeApplication {
 				registry.addMapping("/**")
 						.allowedOrigins("*")
 						.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-						.allowedHeaders("*")
-							.allowCredentials(true);
+						.allowedHeaders("*");
+
 			}
 		};
 }
