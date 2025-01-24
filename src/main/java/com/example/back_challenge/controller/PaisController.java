@@ -12,7 +12,6 @@ import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/pais")
-@CrossOrigin(origins = "http://localhost:4200")
 public class PaisController {
     @Autowired
     private PaisService paisService;

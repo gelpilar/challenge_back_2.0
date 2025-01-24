@@ -13,7 +13,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/planta")
-@CrossOrigin(origins = "http://localhost:4200")
 public class PlantaController {
     @Autowired
     private PlantaService plantasService;
